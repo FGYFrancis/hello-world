@@ -1,8 +1,8 @@
 //Created by Francis Mina
 //Josephus Problem
-import java.util.*
+import java.util.*;
 
-public class Github
+public class Josephus
 {
   public static void main(String[] args)
   {
@@ -10,21 +10,22 @@ public class Github
     Scanner kb = new Scanner(System.in);
     System.out.println("How many people are in the circle? ");
     int num = kb.nextInt();
-    int convert = 0;
-    int count = 0;
+    double convert = 0;
+    double count = 0;
     while(Math.pow(2, count) <= num)
     {
-      convert = num;
+      
+      convert = Math.pow(2,count);
       count++;
     }
-    int l = num - convert;
-    int win = (2 * l) + 1;
-    System.out.println("The winning seat position is " + win + ". ");
+    double l = num - convert;
+    double win = (2 * l) + 1;
+    System.out.println("The winning seat position is " + (int)win + ". ");
   }
   
   public static void description()
   {
-    System.out.println("This program prints the winning seat number in a "Josephus" circle of x amount of people.");
+    System.out.println("This program prints the winning seat number in a \"Josephus\" circle of x amount of people.");
   }
   
 }
