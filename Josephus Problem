@@ -1,0 +1,32 @@
+//Created by Francis Mina
+//Josephus Problem
+import java.util.*
+
+public class Github
+{
+  public static void main(String[] args)
+  {
+    description();
+    Scanner kb = new Scanner(System.in);
+    System.out.println("How many people are in the circle? ");
+    int num = kb.nextInt();
+    int convert = 0;
+    int count = 0;
+    while(Math.pow(2, count) <= num)
+    {
+      convert = num;
+      count++;
+    }
+    int l = num - convert;
+    int win = (2 * l) + 1;
+    System.out.println("The winning seat position is " + win + ". ");
+  }
+  
+  public static void description()
+  {
+    System.out.println("This program prints the winning seat number in a "Josephus" circle of x amount of people.");
+  }
+  
+}
+
+  
